@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "CanMeet",
+    "version": "0.1",
+    "description": "A meeting helper",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "storage",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
