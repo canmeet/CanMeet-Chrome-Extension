@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+    <script src="./js/loggedInIndex.js"></script>
+
+    <!-- import bootstrap -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+ 
+    <script src="../lib/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- import css -->    
+    <link rel="stylesheet" href="./css/LuckyOnePage.css">
+</head>
+
+<body>
+    <div style="height: 300; width: 400">
+        <!-- 標題欄區塊 -->
+        <div class="container">  
+            <div class="row">
+                <div class="col">
+                    <!-- logo -->
+                    <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+                        <img id="myPhoto"
+                            src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                            onclick="upload_UserPhoto.click()"
+                            style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 30;">
+            <div class="column">
+                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 10">
+                    <button type="button" class="btn btn-secondary" id="menuButton">話題</button>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

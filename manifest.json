@@ -8,8 +8,15 @@
     },
     "permissions": [
         "scripting",
-        "activeTab"
+        "activeTab",
+        "cookies"
     ],
+    "host_permissions": [
+        "http://127.0.0.1/",
+        "*://canmeet.github.io/*",
+        "*://canmeet.herokuapp.com/*",
+        "https://canmeet-img-proxy.slink.ren/*"
+      ],
     "action": {
         "default_popup": "popup.html"
     }
