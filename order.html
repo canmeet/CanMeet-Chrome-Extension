@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Load css -->
+    <link rel="stylesheet" href="./order.css">
+
+    <!-- Load Script -->
+    <script src="./order.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Load bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <form>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-auto">
+                    <!-- logo -->
+                    <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
+                </div>
+
+                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 10">
+                    <button type="button" class="btn fucntion-bar" id="topic" style="font-size: 10px;">話題</button>
+                </div>
+
+                <div class="col-md-auto" style="display: flex; justify-content: center; margin: 10">
+                    <button type="button" class="btn fucntion-bar" id="order" style="font-size: 10px;">順序</button>
+                </div>
+
+                <div class="col-md-auto" style="display: flex; justify-content: center; margin: 10">
+                    <button type="button" class="btn fucntion-bar" id="picked" style="font-size: 10px;">幸運兒</button>
+                </div>
+            </div> 
+            <div class="container">
+                <center><button type="button" class="btn reorder" id="reorder" style="font-size: 10px;">重新產生</button></center>
+            </div>
+            <div class="container">
+                <center><p style="font-size: 10px;position: absolute;
+                    height: 13px;
+                    left: 163px;
+                    top: 220px;">05/20 09:41 陳筱潔 重新產生了順序</p></center>
+            </div>
+            <div class="container">
+                <button type="button" class="btn help" id="help" style="font-size: 5px;">?</button>
+            </div>
+    </div>
+    </form>
+</body>

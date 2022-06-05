@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+body{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 480px;
+    height: 256px;
+    left: 2760px;
+    top: 1699px;
+
+    background: #FFFFFF;
+    /* Secondary */
+
+    border: 1px solid #EEF1F4;
+}
+
+
+
+/***** 頭像設定 *****/
+.round_photo{
+   /* button / profile / user / 7 */
+   position: absolute;
+   left: 0%;
+   right: 3.85%;
+   top: 0%;
+   bottom: 3.85%;
+
+    border-radius: 10px;
+}
+
+/***** 順序編號圖示 *****/
+#icon_num{
+    /* icon / number */
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+
+    position: absolute;
+    left: 0%;
+    right: 65.38%;
+    top: 0%;
+    bottom: 65.38%;
+
+    /* Primary */
+    background: #667080;
+    border-radius: 100px;
+}
+
+/***** 重新產生順序 *****/
+button#reorder{
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 24px;
+    gap: 10px;
+    
+    position: absolute;
+    height: 28px;
+    left: 213px;
+    top: 184px;
+    
+    color: white;
+    /* Primary */
+    background: #667080;
+    /* Primary */
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+/***** 功能欄按鈕 *****/
+button#fucntion_bar{
+    /* Pill / outline */
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 24px;
+    gap: 10px;
+
+    position: absolute;
+    left: 68.39%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    color: #667080;
+    /* Secondary */
+    background: #EEF1F4;
+    /* Primary */
+    border: 1px solid #667080;
+    border-radius: 24px;
+
+}
+
+button#help{
+
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    left: 456px;
+    top: 232px;
+    color: white;
+    background: #667080;
+    border-radius: 50%;
+    /* Primary */
+    
+}
+
+
