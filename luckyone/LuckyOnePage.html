@@ -17,27 +17,28 @@
 
     <!-- import css -->    
     <link rel="stylesheet" href="./css/LuckyOnePage.css">
+
+    <!-- import javascript -->
+    <script src="../luckyone/js/LuckyOnePage.js" defer></script>
 </head>
 
 <body>
-    <div style="height: 300; width: 400">
-        <!-- 標題欄區塊 -->
+    <div style="height: 300; width: 480">
+        <!-- 標題欄區塊(navbar) -->
         <div class="container">  
             <div class="row">
-                <div class="col">
+                <div class="col-3">
                     <!-- logo -->
                     <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
                 </div>
-                <div class="col">
-                    <!-- logo -->
-                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
+                <div class="col-6">
+                    <!-- navbar -->
+                    <button type="button" class="btn btn-outline-dark" id="TopicGenerator">話題</button>
+                    <button type="button" class="btn btn-outline-dark" id="OrderGenerator">順序</button>
+                    <button type="button" class="btn btn-outline-dark" id="LuckyOneGenerator" disabled>幸運兒</button>
                 </div>
-                <div class="col">
-                    <!-- logo -->
-                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
-                </div>
-                <div class="col">
-                    <!-- logo -->
+                <div class="col-3">
+                    <!-- userinfo -->
                     <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
                         <img id="myPhoto"
                             src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
@@ -48,11 +49,32 @@
             </div>
         </div>
 
-        <div class="container" style="margin-top: 30;">
-            <div class="column">
-                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 10">
-                    <button type="button" class="btn btn-secondary" id="menuButton">話題</button>
-
+        <div class="container" >
+            <div class="row">
+                <div class="col-3">
+                </div>
+                <div class="col-6" id="area_mainfuction">
+                    <!-- 幸運兒頭像 -->
+                    <center>
+                        <img src="./img/fortest.jpeg" class="userphoto" alt="" style="display: flex; justify-content: center;">
+                        <p id="userid"> username </p>
+                    </center>
+                    
+                    <!-- 重新產生按鈕 -->
+                    <div class="col-md-auto " style="display: flex; justify-content: center;">
+                        <button type="button" class="btn btn-secondary" id="refreshButton">重新產生</button>
+    
+                    </div>
+                    <div>
+                        <!-- 重新產生提示 -->
+                        <p id="refresh_hint" style="display: flex; font-size: 10px;justify-content: center;color: #667080;margin-top:5px">重新產生了幸運兒</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <!-- help button -->
+                    <button type="button" id="btn_QA" onclick="window.open('https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919','_blank')">
+                        <img src="/luckyone/img/icon_Q&A.png" id="img_forQA" alt="">
+                    </button>
                 </div>
             </div>
         </div>
