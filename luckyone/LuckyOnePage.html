@@ -14,6 +14,9 @@
     <script src="../lib/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
         crossorigin="anonymous"></script>
+    
+    <!-- import SVG framework -->
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 
     <!-- import css -->    
     <link rel="stylesheet" href="./css/LuckyOnePage.css">
@@ -24,12 +27,14 @@
 
 <body>
     <div style="height: 300; width: 480">
-        <!-- 標題欄區塊(navbar) -->
+        <!-- 標題欄區塊(navbar) begin -->
         <div class="container">  
             <div class="row">
                 <div class="col-3">
                     <!-- logo -->
-                    <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
+                    <h1 style="color: #667080; padding-top: 14px; font-size: 25px; font-weight: bold; font-family: Noto Sans TC;">CanMeet</h1>
+                    <span class="iconify" data-icon="el:group" id="groupicon"></span>
+                    <p id="recent_team" style="font-size: 10px;">當前小組</p>
                 </div>
                 <div class="col-6">
                     <!-- navbar -->
@@ -48,11 +53,13 @@
                 </div>
             </div>
         </div>
+        <!-- 標題欄區塊(navbar) end -->
 
         <div class="container" >
             <div class="row">
                 <div class="col-3">
                 </div>
+                <!-- 主功能區域 begin -->
                 <div class="col-6" id="area_mainfuction">
                     <!-- 幸運兒頭像 -->
                     <center>
@@ -70,6 +77,8 @@
                         <p id="refresh_hint" style="display: flex; font-size: 10px;justify-content: center;color: #667080;margin-top:5px">重新產生了幸運兒</p>
                     </div>
                 </div>
+
+                <!-- 主功能區域 end -->
                 <div class="col-3">
                     <!-- help button -->
                     <button type="button" id="btn_QA" onclick="window.open('https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919','_blank')">

@@ -20,6 +20,7 @@ img.userphoto{
 #userid {
     font-size: 10px;
     color: #667080;
+    padding-top: 5px;
 }
 
 #myphoto {
@@ -29,9 +30,8 @@ img.userphoto{
 
     /* position */
     position: relative;
-    bottom: 5px;
-    left: 55px;
-    
+    bottom: 10px;
+    left: 57px;
 }
 
 #refreshbutton {
@@ -73,6 +73,10 @@ img.userphoto{
 }
 
 /*----- navbar (begin) -----*/
+#groupicon {
+    float: left;
+    margin-right: 5px;
+}
 
 #TopicGenerator {
     width: 50px;
@@ -84,6 +88,9 @@ img.userphoto{
     /* font setting */
     font-size: 10px;
     color: #667080;
+    padding-bottom: 10px;
+    padding-bottom:0px; 
+    padding-top:1px;
 
     /* position */
     position: relative;
@@ -104,6 +111,8 @@ img.userphoto{
     /* font setting */
     font-size: 10px;
     color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
 
     /* position */
     position: relative;
@@ -124,11 +133,14 @@ img.userphoto{
     /* font setting */
     font-size: 10px;
     color: #EEF1F4;
+    padding-bottom:0px; 
+    padding-top:1px;
 
     /* position */
     position: relative;
     top: 15px;
 }
+
 
 /*----- navbar (end) -----*/
 
@@ -148,7 +160,7 @@ img.userphoto{
 /*----- mainfunction area (begin) -----*/
 
 #area_mainfuction {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 /*----- mainfunction area (end) -----*/
