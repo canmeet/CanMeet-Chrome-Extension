@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../lib/jquery-3.6.0.min.js"></script>
-    <script src="./js/loggedInIndex.js"></script>
 
     <!-- import bootstrap -->
     <link href="../lib/bootstrap.min.css" rel="stylesheet"
@@ -64,14 +63,13 @@
                 <div class="col-6" id="area_mainfuction">
                     <!-- 幸運兒頭像 -->
                     <center>
-                        <img src="./img/fortest.jpeg" class="userphoto" alt="" style="display: flex; justify-content: center;">
+                        <img src="./img/fortest.jpeg" class="userphoto" id="luckyuser" alt="" style="display: flex; justify-content: center;">
                         <p id="userid"> username </p>
                     </center>
                     
                     <!-- 重新產生按鈕 -->
                     <div class="col-md-auto " style="display: flex; justify-content: center;">
-                        <button type="button" class="btn btn-secondary" id="refreshButton" onclick="refreshLuckyOne()">重新產生</button>
-    
+                        <button type="button" class="btn btn-secondary" id="refreshButton" name="meetID" onclick="refreshLuckyOne()">重新產生</button>
                     </div>
                     <div>
                         <!-- 重新產生提示 -->
@@ -86,7 +84,8 @@
 
 
         <!-- help button -->
-        <button type="button" id="btn_QA" onclick="window.open('https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919','_blank')">
+        <button type="button" id="btn_QA" onclick="window.location.href='https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919';  
+        window.open('https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919');">
             <img src="/luckyone/img/icon_Q&A.png" id="img_forQA" alt="">
         </button>
 

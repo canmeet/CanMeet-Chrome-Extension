@@ -33,7 +33,7 @@ getCurrentTab().then((res) => {
 
         if (res.value != null) { // logged in
           myAuthorization = res.value;
-          window.location.replace("/inMeet/LoggedInIndex.html");
+          window.location.replace("luckyone/LuckyOnePage.html");
 
 
         }
