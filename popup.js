@@ -35,6 +35,7 @@ getCurrentTab().then((res) => {
           // window.location.replace("/inMeet/LoggedInIndex.html");
           window.location.replace("/inMeet/CheckMeetId.html");
 
+
         }
       },
     )
@@ -43,6 +44,7 @@ getCurrentTab().then((res) => {
       if (myAuthorization == null) {
         // alert("not login")
         window.location.replace("./LoginResg.html");
+
       }
     }, 390)
 
@@ -58,6 +60,7 @@ getCurrentTab().then((res) => {
     } else {
       // logged in
       alert("目前不在Google Meet會議中，暫無法使用");
+
     }
   }
 
