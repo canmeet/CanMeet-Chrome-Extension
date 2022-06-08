@@ -1,5 +1,9 @@
 window.onload = setPhoto;
 
+// 設定點擊事件
+$("#btn_LuckyOneButton").on("click", luckyoneclicked);
+
+
 
 function setPhoto() {
 
@@ -33,6 +37,11 @@ function setPhoto() {
     )
 
     
+}
+
+function luckyoneclicked() {
+    console.log("luckyone got click!");
+    window.location.replace("/luckyone/LuckyOnePage.html");  
 }
 
 async function getCurrentTab() {

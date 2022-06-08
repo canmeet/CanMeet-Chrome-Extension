@@ -7,6 +7,9 @@ window.onload = setPhoto;
 $("#btn_QA").on("click", helpClicked);
 $("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
+$("#btn_TopicGenerator").on("click", logoclicked);
+$("btn_OrderGenerator").on("click", logoclicked);
+
 
 
 function logoclicked() {

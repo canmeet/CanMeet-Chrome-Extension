@@ -88,9 +88,21 @@ img.userphoto{
 /*----- navbar (begin) -----*/
 #groupicon {
     float: left;
+    margin-left: 10px;
     margin-right: 5px;
 }
-
+#btn_TopicGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_OrderGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_LuckyOneGenerator {
+    float: left;
+    padding-right: 5px;
+}
 #TopicGenerator {
     width: 50px;
     height: 28px;
