@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../lib/jquery-3.6.0.min.js"></script>
+    <!-- <script src="./js/loggedInIndex.js"></script> -->
+    <link href="../../lib/bootstrap.min.css" rel="stylesheet">
+    <script src="../../lib/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" href="./css/LoggedInIndex.css"> -->
+    <link href="./css/vote.css" rel="stylesheet">
+</head>
+
+<body>
+    <div style="height: 300; width: 400">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <!-- logo -->
+                    <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
+                </div>
+                <div class="col">
+                    <!-- logo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+
+                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-people-fill" viewBox="0 0 16 16">
+                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            <path fill-rule="evenodd"
+                                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
+                            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
+                        </svg> -->
+                        <img id="myPhoto"
+                            src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                            onclick="upload_UserPhoto.click()"
+                            style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="margin-top: 15;">
+            <div class="column">
+                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 10">
+                    <div id="timeArea">15</div>
+
+                </div>
+                <div class="container" style="margin-top: 15;">
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary firstBtn" id="whiteMenuButton">
+                                <div>美食</div>
+                            </button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary secondBtn" id="darkMenuButton">電影</button>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="btn btn-secondary thirdBtn" id="whiteMenuButton">旅遊</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container" style="margin-top: 25;">
+                    <div class="row">
+                        <div class="col-10">
+                            <div class="progress" style="margin-top: 5;">
+                                <div class="progress-bar bg-secondary" role="progressbar" style="width: 25%" 
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-1" >
+                            1/5
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    <script src="./js/vote.js"></script>
+</body>
+
+</html>
