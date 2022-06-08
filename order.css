@@ -1,122 +1,166 @@
-@charset "utf-8";
+/* button / profile / user / 7 */
 
-body{
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 480px;
-    height: 256px;
-    left: 2760px;
-    top: 1699px;
-
-    background: #FFFFFF;
-    /* Secondary */
-
-    border: 1px solid #EEF1F4;
-}
-
-
-
-/***** 頭像設定 *****/
-.round_photo{
-   /* button / profile / user / 7 */
-   position: absolute;
-   left: 0%;
-   right: 3.85%;
-   top: 0%;
-   bottom: 3.85%;
-
-    border-radius: 10px;
-}
-
-/***** 順序編號圖示 *****/
-#icon_num{
-    /* icon / number */
-    /* Auto layout */
-    display: flex;
-    flex-direction: column;
+img.userphoto{
+    display: flex; 
     justify-content: center;
-    align-items: center;
-    padding: 10px;
-    gap: 10px;
+    width: 70px;
+    height: 70px;
 
-    position: absolute;
-    left: 0%;
-    right: 65.38%;
-    top: 0%;
-    bottom: 65.38%;
-
-    /* Primary */
-    background: #667080;
+    background: url(.png);
     border-radius: 100px;
 }
 
-/***** 重新產生順序 *****/
-button#reorder{
-    box-sizing: border-box;
-
-    /* Auto layout */
+#LuckyUser {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    align-items: center;
-    padding: 9px 24px;
-    gap: 10px;
-    
-    position: absolute;
+    font-size: 10px;
+    color: #667080;
+}
+
+#userid {
+    font-size: 10px;
+    color: #667080;
+    padding-top: 5px;
+}
+
+#myphoto {
+    background: url(.png);
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 100px;
+
+    /* position */
+    position: relative;
+    bottom: 10px;
+    left: 57px;
+}
+
+#refreshbutton {
+    /* font setting */
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 125%;
+    color: #EEF1F4;
+
+    /* button background */
+    width: 80px;
     height: 28px;
-    left: 213px;
-    top: 184px;
-    
-    color: white;
-    /* Primary */
     background: #667080;
-    /* Primary */
     border: 1px solid #667080;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
     border-radius: 2px;
 }
 
-/***** 功能欄按鈕 *****/
-button#fucntion_bar{
-    /* Pill / outline */
-    box-sizing: border-box;
-
-    /* Auto layout */
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 9px 24px;
-    gap: 10px;
-
-    position: absolute;
-    left: 68.39%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
-
-    color: #667080;
-    /* Secondary */
-    background: #EEF1F4;
-    /* Primary */
-    border: 1px solid #667080;
-    border-radius: 24px;
-
+＃refresh_hint {
+    font-size: 10px; 
 }
 
-button#help{
+#btn_QA {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
 
+    /* position */
     position: absolute;
+    left: 430px;
+    top: 250px;
+
+
+    background-image: url('../img/icon_Q&A.png');
+    width: 40px;
+    height: 20px;
+}
+
+/*----- navbar (begin) -----*/
+#groupicon {
+    float: left;
+    margin-right: 5px;
+}
+
+#TopicGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom: 10px;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#TopicGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#OrderGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #667080;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #EEF1F4;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#OrderGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#LuckyOneGenerator {
+    width: 62px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+
+
+/*----- navbar (end) -----*/
+
+#btn_QA:hover {
+    opacity: 0.7;
+}
+
+#img_forQA {
     width: 16px;
     height: 16px;
-    left: 456px;
-    top: 232px;
-    color: white;
-    background: #667080;
-    border-radius: 50%;
-    /* Primary */
-    
+
+    /* position */
+    left: 470px;
+    top: 300px;
 }
 
+/*----- mainfunction area (begin) -----*/
 
+#area_mainfuction {
+    margin-top: 10px;
+}
+
+/*----- mainfunction area (end) -----*/
