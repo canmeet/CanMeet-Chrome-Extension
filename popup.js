@@ -17,7 +17,6 @@ chrome.cookies.get(
   },
 )
 
-
 let tab = null;
 getCurrentTab().then((res) => {
   tab = res;
@@ -33,7 +32,10 @@ getCurrentTab().then((res) => {
 
         if (res.value != null) { // logged in
           myAuthorization = res.value;
-          window.location.replace("luckyone/LuckyOnePage.html");
+
+          // window.location.replace("/inMeet/LoggedInIndex.html");
+          window.location.replace("/inMeet/CheckMeetId.html");
+
 
 
         }
@@ -42,7 +44,9 @@ getCurrentTab().then((res) => {
     setTimeout(() => {
       // not login
       if (myAuthorization == null) {
-        alert("not login")
+        // alert("not login")
+        window.location.replace("./LoginResg.html");
+
       }
     }, 390)
 
@@ -50,12 +54,14 @@ getCurrentTab().then((res) => {
 
   } else {
     // Not in Google Meet
-    alert("false");
+    // alert("false");
     if (myAuthorization === null) {
       // not login
+      window.location.replace("./LoginResg.html");
 
     } else {
       // logged in
+      alert("目前不在Google Meet會議中，暫無法使用");
 
     }
   }
