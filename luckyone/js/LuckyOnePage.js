@@ -13,6 +13,8 @@ $("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
 $("#btn_OrderGenerator").on("click", logoclicked);
+$("#btn_userprofile").on("click", avatarclicked);
+
 
 
 
@@ -21,6 +23,11 @@ function logoclicked() {
     window.location.replace("/inMeet/LoggedInIndex.html");
 }
 
+// avatarclicked：點擊後進到個人資料編輯界面
+function avatarclicked() {
+    window.location.href="https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html";  
+    window.open("https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html");
+}
 
 
 function helpClicked() {
