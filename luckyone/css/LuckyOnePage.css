@@ -55,7 +55,7 @@ img.userphoto{
     opacity: 0.7;
 }
 
-＃refresh_hint {
+#refresh_hint {
     font-size: 10px; 
 }
 
@@ -73,6 +73,16 @@ img.userphoto{
     background-image: url('../img/icon_Q&A.png');
     width: 40px;
     height: 20px;
+}
+
+#btn_logo {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+    
+    width: 100px;
+    height: 44px;
+    margin-bottom: 5px;
 }
 
 /*----- navbar (begin) -----*/

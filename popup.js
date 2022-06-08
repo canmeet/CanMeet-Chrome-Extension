@@ -34,8 +34,8 @@ getCurrentTab().then((res) => {
           myAuthorization = res.value;
 
           // window.location.replace("/inMeet/LoggedInIndex.html");
-          window.location.replace("/inMeet/CheckMeetId.html");
-
+          //window.location.replace("/inMeet/CheckMeetId.html");   //origin
+          window.location.replace("/luckyone/LuckyOnePage.html");
 
 
         }
