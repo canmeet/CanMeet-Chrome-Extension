@@ -1,5 +1,6 @@
 window.onload = setPhoto;
 $("#topicBtn").on("click", topicClicked);
+$('#luckyBtn').on("click", luckyClicked);
 function setPhoto() {
 
 
@@ -36,4 +37,8 @@ function setPhoto() {
 
 function topicClicked(){
     window.location.replace("./topic/Vote.html");
+}
+
+function luckyClicked() {
+    window.location.replace("./luckyone/LuckyOnePage.html");
 }

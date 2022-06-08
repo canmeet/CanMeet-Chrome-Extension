@@ -44,8 +44,8 @@ function queryMeetId() {
                             console.log(JSON.stringify(e))
                             
                             if(e.status==404){
-                                // 小組尚未創建，詢問是否創建小組
-                                window.location.replace("./CreateGroup.html");
+                                // 小組尚未創建，詢問是否創建並加入小組
+                                window.location.replace("./AskJoinGroup.html");
                                 $('#showRes').html( "Erroe!!! " + JSON.stringify(e));
 
                             } else if(e.status == 401){
