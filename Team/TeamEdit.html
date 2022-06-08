@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+
+    <!-- import bootstrap -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <script src="../lib/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+    <!-- import SVG framework -->
+    <script src="../lib/iconify.min.js"></script>
+
+    <!-- import css -->
+    <link rel="stylesheet" href="./css/TeamEdit.css">
+
+    <!-- import javascript -->
+    <script src="./js/TeamEdit.js" defer></script>
+</head>
+
+<body>
+    <div style="height: 300; width: 480">
+        <!-- 標題欄區塊(navbar) begin -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <!-- logo -->
+                    <button type="button" id="btn_logo">
+                        <h1
+                            style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold; font-family: Noto Sans TC;">
+                            CanMeet</h1>
+                    </button>
+
+                    <span class="iconify" data-icon="el:group" id="groupicon"></span>
+                    <p id="current_team" style="font-size: 10px;">當前小組</p>
+                </div>
+                <div class="col-6">
+                    <!-- navbar -->
+                    <div id="btn_TopicGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="TopicGenerator">話題</button>
+                    </div>
+                    <div id="btn_OrderGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="OrderGenerator">順序</button>
+                    </div>
+                    <div id="btn_LuckyOneGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="LuckyOneGenerator">幸運兒</button>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <!-- userinfo -->
+                    <div id="btn_userprofile">
+                        <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+                            <img id="myPhoto"
+                                src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                                onclick="upload_UserPhoto.click()"
+                                style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 標題欄區塊(navbar) end -->
+
+
+        <!-- 主功能區域 begin：主要的功能可以放在此container中，基本上應該不會影響到其他的UI -->
+        <div class="container">
+            <div class="row">
+                <form>
+
+                    <div class="col-3" id="Input_GroupName">
+                        <label for="GroupName" class="form-label"
+                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">小組名稱</label>
+                        <input type="email" class="form-control form-control-sm" id="GroupName">
+                    </div>
+                    <div class="col-3" id="Input_MeetID">
+                        <label for="MeetID" class="form-label"
+                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">Google Meet代碼</label>
+                        <input class="form-control form-control-sm" id="MeetID">
+                    </div>
+
+                    
+                    <button class="submit" id="btn_canceled">取消</button>
+                    <button class="submit" id="btn_verified">確認</button>
+                </form>
+            </div>
+        </div>
+        <!-- 主功能區域 end -->
+
+
+        <!-- help button -->
+        <button type="button" id="btn_QA">
+            <img src="/luckyone/img/icon_Q&A.png" id="img_forQA" alt="">
+        </button>
+
+    </div>
+</body>
+
+</html>
