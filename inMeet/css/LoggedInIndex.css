@@ -55,5 +55,27 @@
     
     width: 100px;
     height: 44px;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
+
+#groupicon {
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+
+/*----- navbar (end) -----*/
+
+#btn_QA:hover {
+    opacity: 0.7;
+}
+
+#img_forQA {
+    width: 16px;
+    height: 16px;
+
+    /* position */
+    left: 470px;
+    top: 300px;
+}
+
