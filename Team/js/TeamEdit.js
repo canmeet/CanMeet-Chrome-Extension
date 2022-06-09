@@ -69,7 +69,16 @@ function setPhoto() {
 
         },
     )
+    
 
+    getCurrentTab().then((res) => {
+        tab = res;
+        let tabUrl = JSON.stringify([tab.url]);
+        let meetId =tabUrl.substring(26, 38);
+        console.log(meetId);
+
+        $('#MeetID').attr('value', meetId);
+    })
 
 }
 

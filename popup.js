@@ -35,7 +35,7 @@ getCurrentTab().then((res) => {
 
           // window.location.replace("/inMeet/LoggedInIndex.html");
           //window.location.replace("/inMeet/CheckMeetId.html");   //origin
-          window.location.replace("/luckyone/LuckyOnePage.html");
+          window.location.replace("/Team/Teamedit.html");
 
 
         }

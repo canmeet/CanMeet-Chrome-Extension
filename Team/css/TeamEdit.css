@@ -1,10 +1,14 @@
 /* button / profile / user / 7 */
 
 img.userphoto{
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+    
     display: flex; 
     justify-content: center;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
 
     background: url(.png);
     border-radius: 100px;
@@ -201,7 +205,7 @@ img.userphoto{
     width: 184px;
     height: 51px;
     left: 20px;
-    top: 90px;
+    top: 85px;
 }
 
 #Input_MeetID {
@@ -217,7 +221,62 @@ img.userphoto{
     width: 184px;
     height: 51px;
     left: 220px;
-    top: 90px;
+    top: 85px;
+
+}
+
+#MeetID {
+    font-size: 10px;
+    color: #667080;
+}
+
+#GroupName {
+    font-size: 10px;
+    color: #667080;
+}
+
+#memberlist_hint {
+
+    /* position */
+    position: absolute;
+    left: 20px;
+    top: 145px;
+}
+
+#memberlist {
+    /* position */
+    position: absolute;
+    left: 20px;
+    top: 165px;
+    width: 400px;
+    height: 51px;
+
+}
+
+.member {
+    width: 50px;
+    height: 50px;
+    border: #667080;
+
+    float: left;
+}
+
+.btn_deletemember {
+    
+    /* clear defult button */
+    background-color: transparent;
+    border: none;
+    
+    /* position */
+    position: relative;
+    top: 7px;
+    right: 3px;
+    z-index:1;
+
+}
+
+.img_deletemember:hover {
+    opacity: 0.7;
 }
 
 #btn_canceled {
@@ -232,7 +291,7 @@ img.userphoto{
     width: 57px;
     height: 28px;
     left: 20px;
-    top: 202px;
+    top: 240px;
 
     /* font setting */
     color: #667080;
@@ -258,7 +317,7 @@ img.userphoto{
     width: 57px;
     height: 28px;
     left: 85px;
-    top: 202px;
+    top: 240px;
 
     /* font setting */
     color: #EEF1F4;

@@ -73,19 +73,34 @@
         <div class="container">
             <div class="row">
                 <form>
-
-                    <div class="col-3" id="Input_GroupName">
-                        <label for="GroupName" class="form-label"
-                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">小組名稱</label>
-                        <input type="email" class="form-control form-control-sm" id="GroupName">
+                    <div class="row-6">
+                        <div class="col-3" id="Input_GroupName">
+                            <label for="GroupName" class="form-label"
+                                style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">小組名稱</label>
+                            <input type="text" class="form-control form-control-sm" id="GroupName">
+                        </div>
+                        <div class="col-3" id="Input_MeetID">
+                            <label for="MeetID" class="form-label"
+                                style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">Google Meet代碼</label>
+                            <input type="text" class="form-control form-control-sm" id="MeetID" value="取得meetID中..." disabled>
+                        </div>
                     </div>
-                    <div class="col-3" id="Input_MeetID">
-                        <label for="MeetID" class="form-label"
-                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">Google Meet代碼</label>
-                        <input class="form-control form-control-sm" id="MeetID">
+                    <p id="memberlist_hint" style="display: flex; font-size: 10px;justify-content: center;color: #667080;margin-top:5px">組員</p>
+                    <div id="memberlist">
+                        <!-- 組員頭像放置欄位 -->
+                        <!-- 新增的組員物件 begin -->
+                        <div class="member" >
+                            <button class="btn_deletemember img_deletemember"><img src="/luckyone/img/cross.png" alt="" style="width: 15px;height: 15px;"></button>
+                            <img src="/luckyone/img/fortest.jpeg" class="userphoto" >
+                        </div>
+                        <!-- 新增的組員物件 end -->
+                        <div class="member" >
+                            <button class="btn_deletemember img_deletemember"><img src="/luckyone/img/cross.png" alt="" style="width: 15px;height: 15px;"></button>
+                            <img src="/luckyone/img/fortest.jpeg" class="userphoto" >
+                        </div>
+
                     </div>
 
-                    
                     <button class="submit" id="btn_canceled">取消</button>
                     <button class="submit" id="btn_verified">確認</button>
                 </form>
