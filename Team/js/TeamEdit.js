@@ -9,7 +9,9 @@ $("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
 $("#btn_OrderGenerator").on("click", logoclicked);
+$("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
+$(".btn_deletemember").on("click", deletemember);
 
 
 
@@ -23,6 +25,11 @@ function logoclicked() {
 function avatarclicked() {
     window.location.href="https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html";  
     window.open("https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html");
+}
+
+// luckyoneclicked：點擊後進到幸運兒界面
+function luckyoneclicked() {
+    window.location.replace("/luckyone/LuckyOnePage.html");  
 }
 
 
@@ -125,5 +132,11 @@ function refreshLuckyOne() {
             },
         )
     })
+
+}
+
+// deletemember：刪除使用者
+function deletemember() {
+    $(this).parent().remove();
 
 }
