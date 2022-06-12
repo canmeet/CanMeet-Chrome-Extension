@@ -1,0 +1,215 @@
+/* button / profile / user / 7 */
+
+img.userphoto{
+    display: flex; 
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+
+    background: url(.png);
+    border-radius: 100px;
+}
+
+img.photo{
+    display: flex; 
+    /*justify-content: center;*/
+    width: 70px;
+    height: 70px;
+    left: 20px;
+    top: 50px;
+
+    background: url(.png);
+    border-radius: 100px;
+}
+
+#groupicon{
+    display: flex; 
+    justify-content: left;
+}
+
+#membericon{
+    display: flex; 
+    justify-content: left;
+}
+
+#LuckyUser {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: #667080;
+}
+
+#userid {
+    font-size: 10px;
+    color: #667080;
+    padding-top: 5px;
+}
+
+#myphoto {
+    background: url(.png);
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 100px;
+
+    /* position */
+    position: relative;
+    bottom: 10px;
+    left: 57px;
+}
+
+#refreshbutton {
+    /* font setting */
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 125%;
+    color: #EEF1F4;
+
+    /* button background */
+    width: 80px;
+    height: 28px;
+    background: #667080;
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+#refreshbutton:hover {
+    opacity: 0.7;
+}
+
+＃refresh_hint {
+    font-size: 10px; 
+}
+
+#btn_QA {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+
+    /* position */
+    position: absolute;
+    left: 430px;
+    top: 250px;
+
+
+    background-image: url('../img/icon_Q&A.png');
+    width: 40px;
+    height: 20px;
+}
+
+/*----- navbar (begin) -----*/
+#groupicon {
+    float: left;
+    margin-right: 5px;
+}
+
+#TopicGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom: 10px;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#TopicGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#OrderGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#OrderGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#LuckyOneGenerator {
+    width: 62px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+
+
+/*----- navbar (end) -----*/
+
+#btn_QA:hover {
+    opacity: 0.7;
+}
+
+#img_forQA {
+    width: 16px;
+    height: 16px;
+
+    /* position */
+    left: 470px;
+    top: 300px;
+}
+
+/*----- mainfunction area (begin) -----*/
+
+#area_mainfuction {
+    margin-top: 10px;
+}
+
+/*----- mainfunction area (end) -----*/
+
+img.GroupBox{
+    /* Group card */
+    box-sizing: border-box;
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 189px;
+    filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 0.25));
+
+    position: absolute;
+    width: 456px;
+    height: 76px;
+    left: 12px;
+    top: 66px;
+
+    /* Primary */
+    background-color: #EEF1F4;
+    border: 2px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
