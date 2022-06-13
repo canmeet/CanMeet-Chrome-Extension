@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../../lib/jquery-3.6.0.min.js"></script>
     <!-- <script src="./js/loggedInIndex.js"></script> -->
+    <script src="../../lib/iconify.min.js"></script>
     <link href="../../lib/bootstrap.min.css" rel="stylesheet">
     <script src="../../lib/bootstrap.bundle.min.js"></script>
     <!-- <link rel="stylesheet" href="./css/LoggedInIndex.css"> -->
@@ -13,79 +14,105 @@
 </head>
 
 <body>
-    <div style="height: 300; width: 400">
+    <div style="height: 300; width: 480">
+        <!-- 標題欄區塊(navbar) begin -->
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-3">
                     <!-- logo -->
-                    <h1 style="color: #667080; padding-top: 20px; font-size: 20px; font-weight: bold;">CanMeet</h1>
-                </div>
-                <div class="col">
-                    <!-- logo -->
-                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
-                </div>
-                <div class="col">
-                    <!-- logo -->
-                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;"> </h3>
-                </div>
-                <div class="col">
-                    <!-- logo -->
-                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+                    <button type="button" id="btn_logo">
+                        <h1
+                            style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold; font-family: Noto Sans TC;">
+                            CanMeet</h1>
+                    </button>
 
-                        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            class="bi bi-people-fill" viewBox="0 0 16 16">
-                            <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            <path fill-rule="evenodd"
-                                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z" />
-                            <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-                        </svg> -->
-                        <img id="myPhoto"
-                            src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
-                            onclick="upload_UserPhoto.click()"
-                            style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
-                    </h3>
+                    <span class="iconify" data-icon="el:group" id="groupicon"></span>
+                    <p id="current_team" style="font-size: 10px; width: 200;">當前小組</p>
+                </div>
+                <div class="col-6">
+                    <!-- navbar -->
+                    <div id="btn_TopicGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="TopicGenerator">話題</button>
+                    </div>
+                    <div id="btn_OrderGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="OrderGenerator">順序</button>
+                    </div>
+                    <div id="btn_LuckyOneGenerator">
+                        <button type="button" class="btn btn-outline-dark" id="LuckyOneGenerator">幸運兒</button>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <!-- userinfo -->
+                    <div id="btn_userprofile">
+                        <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+                            <img id="myPhoto"
+                                src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                                onclick="upload_UserPhoto.click()"
+                                style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
+                        </h3>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- 標題欄區塊(navbar) end -->
 
-        <div class="container" style="margin-top: 15;">
+        <div class="container">
             <div class="column">
-                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 10">
-                    <div id="" style="color: #667080;font-weight: 700;line-height: 125%;font-family: 'Noto Sans TC'; font-size: 18px;">分享一部你最近看的電影！</div>
+                <div class="col-md-auto " style="display: flex; justify-content: center; margin: 0">
+                    <div id="mainTopic"
+                        style="color: #667080;font-weight: 650;line-height: 80%;font-family: 'Noto Sans TC'; font-size: 18px;">
+                    </div>
 
                 </div>
-                <div class="container" style="margin-top: 15;">
+                <div class="container" style="margin-top: 5;">
                     <div class="row">
                         <div class="col-md-auto" style="display: flex; justify-content: center; margin-top: 10">
-                            <div id="detailQues" style="text-align: center;font-size: 15px; color: #667080; display: flex;">你喜歡電影的什麼部分？</div>
+                            <div id="detailQues" class="detailQues1"
+                                style="text-align: center;font-size: 15px; color: #667080; display: flex;"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="container" style="margin-top: 15;">
+                <div class="container" style="margin-top: 5;">
                     <div class="row">
                         <div class="col-md-auto" style="display: flex; justify-content: center; margin-top: 3">
-                            <div id="detailQues" style="text-align: center; font-size: 15px; color: #667080; display: flex;">簡單介紹電影內容</div>
+                            <div id="detailQues" class="detailQues2"
+                                style="text-align: center; font-size: 15px; color: #667080; display: flex;"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="container" style="margin-top: 25;">
+                <div class="container" style="margin-top: 8;">
                     <div class="row">
                         <div class="col" style="display: flex; justify-content: center; margin-top: 2">
                             <div>
-                                <button type="button" class="btn btn-secondary">換一題</button>
+                                <div id="changeQuesBtn" style="display:inline;"><button type="button"
+                                        class="btn btn-secondary btn-sm">換一題</button></div>
+                                <div id="regenBtn" style="display:inline;"><button type="button"
+                                        class="btn btn-secondary btn-sm">重新產生</button></div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-
+                <div class="container" style="margin-top: 8;">
+                    <!-- 重新產生提示 -->
+                    <div id="regenerate_hint"
+                        style="display: flex; font-size: 10px;justify-content: center;color: #667080;"></div>
+                    <div id="change_question_hint"
+                        style="display: flex; font-size: 10px;justify-content: center;color: #667080;"></div>
+                </div>
             </div>
         </div>
-
+        <!-- help button -->
+        <button type="button" id="btn_QA">
+            <a href="https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919">
+                <img src="../../img/icon_Q&A.png" id="img_forQA" alt="">
+            </a>
+        </button>
     </div>
-    <script src="./js/vote.js"></script>
+    <script src="./js/showResult.js"></script>
 </body>
 
 </html>

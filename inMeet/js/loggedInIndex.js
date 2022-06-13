@@ -1,6 +1,8 @@
 window.onload = ()=>{
     setPhoto();
     setGroupName();
+    window.clearInterval;
+    window.clearTimeout;
 }
 $("#topicBtn").on("click", topicClicked);
 $('#luckyBtn').on("click", luckyClicked);
@@ -91,7 +93,54 @@ function setGroupName() {
 }
 
 function topicClicked(){
-    window.location.replace("./topic/Vote.html");
+    // window.location.replace("./topic/Vote.html");
+    getCurrentTab().then((res) => {
+        tab = res;
+        let tabUrl = JSON.stringify([tab.url]);
+
+
+        // In Google Meet
+        // let googleMeetId = tabUrl.substring(26, 39);
+        // alert(tabUrl.substring(26, 39));
+        let meetId = tabUrl.substring(26, 38);
+        chrome.cookies.get(
+            { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
+            (res) => {
+
+                if (res.value != null) { // logged in
+
+                    // window.location.replace("/inMeet/LoggedInIndex.html");
+                    // window.location.replace("/inMeet/CheckMeetId.html");
+                    $.ajax(`https://canmeet.herokuapp.com/v1/topic/state?meetId=${meetId}`, {
+                        type: 'GET',  // http method
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": res.value
+                        },
+
+                        success: function (data, status, xhr) {
+                            // $('#current_team').text(data.groupName);
+                            // document.getElementById("groupNameArea").style.visibility="visible";
+                            if(data.state==0){
+                                //非投票階段
+                                window.location.replace("./topic/showResult.html");
+                            }else{
+                                //投票階段
+                                window.location.replace("./topic/Vote.html");
+                            }
+                        },
+                        error: function (e) {
+                            // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));
+                            console.log(JSON.stringify(e))
+
+                        }
+                    });
+
+
+                }
+            },
+        )
+    })
 }
 
 function luckyClicked() {
