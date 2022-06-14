@@ -7,8 +7,12 @@ window.onload = ()=>{
 $("#topicBtn").on("click", topicClicked);
 $('#luckyBtn').on("click", luckyClicked);
 $("#btn_QA").on("click", helpClicked);
-$("#btn_userprofile").on("click", ()=>{
+$("#myGroup").on("click", ()=>{
     window.location.replace("../teamlist/teamlist.html");
+});
+$("#myPhoto").on("click", ()=>{
+    window.location.href = "https://canmeet.github.io/edit_profile/";
+    window.open("https://canmeet.github.io/edit_profile/");
 });
 function setPhoto() {
 

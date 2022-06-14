@@ -73,8 +73,16 @@ function setGroupName() {
                         },
 
                         success: function (data, status, xhr) {
-                            $('#current_team').text(data.groupName);
-                            document.getElementById("groupNameArea").style.visibility="visible";
+                            $('#GroupNames').text(data.groupName + " | " + meetId);
+                            // $('#GroupMeetID').text(meetId);
+                            // document.getElementById("groupNameArea").style.visibility="visible";
+                            let photosCode = '';
+                            for(i=0;i<data.memberAmount;i++){
+                                let singlePhoto = `<img src="${data.photoArray[i]}"
+                                id="MemberPic">`
+                                photosCode = photosCode + singlePhoto;
+                            }
+                            $('#membericon').html(photosCode)
                         },
                         error: function (e) {
                             // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));
