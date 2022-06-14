@@ -5,7 +5,6 @@ window.onload = setPhoto;
 
 // 設定點擊事件
 $("#btn_QA").on("click", helpClicked);
-$("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
 $("#btn_OrderGenerator").on("click", logoclicked);
@@ -13,6 +12,7 @@ $("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 $(".btn_deletemember").on("click", deletemember);
 $("#btn_canceled").on("click", backtoteamlist);
+$("#btn_verified").on("click",  modifygroupinfo);
 
 
 
@@ -85,6 +85,7 @@ function setPhoto() {
 
     let test_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWNrQGFiYy5jb20iLCJlbWFpbCI6ImphY2tAYWJjLmNvbSIsImlhdCI6MTY1NDk3MTA1N30.y6m32iGO2WGE1O8BCtU_l65DZN42FqdXbtsDhwnIrYg";
     let test_groupID = "crg-edsg-cye";
+    let groupID = $("#MeetID").val();
     
     chrome.cookies.get(
         { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
@@ -104,7 +105,7 @@ function setPhoto() {
 
                 success: function (data, status, xhr) {
                     // alert(JSON.stringify(data.photoUrl))
-                    $('#GroupName').attr('value', data.groupId);
+                    $('#GroupName').attr('value', data.groupName);
                     $('#MeetID').attr('value', data.meetId);
                     
                     for (var i = 0; i < data.memberAmount; i++){
@@ -127,11 +128,93 @@ function setPhoto() {
 
 }
 
-// 攔截表單
-$("form").submit( function (e){
-    console.log("submit");
-});
 
+
+// modifygroupinfo: 修改小組資料
+function modifygroupinfo() {
+
+    console.log("submit button got clicked!");
+
+    let groupID = "";
+
+    getCurrentTab().then((res) => {
+        tab = res;
+        let tabUrl = JSON.stringify([tab.url]);
+        let meetId =tabUrl.substring(26, 38);
+        console.log(meetId);
+
+        let test_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWNrQGFiYy5jb20iLCJlbWFpbCI6ImphY2tAYWJjLmNvbSIsImlhdCI6MTY1NDk3MTA1N30.y6m32iGO2WGE1O8BCtU_l65DZN42FqdXbtsDhwnIrYg";
+        let test_groupID = "crg-edsg-cye";
+
+
+        // 取得原本的meetid
+        chrome.cookies.get(
+            { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
+            (res) => {
+                //alert(JSON.stringify(res.value));
+                // myAuthorization = res.value;
+    
+                $.ajax(`https://canmeet.herokuapp.com/v1/group/info?meetId=${test_groupID}`, {
+                    type: 'GET',  // http method
+                    // dataType: "json",
+                    // data: JSON.stringify({  }),
+                    headers: {
+                        "Content-Type": "application/json",
+                        //"Authorization": res.value
+                        "Authorization": test_token
+                    },
+    
+                    success: function (data, status, xhr) {
+                        // alert(JSON.stringify(data.photoUrl))
+                        console.log("groupID"= + data.groupId);
+                        groupID = data.groupId;
+                    },  
+                    error: function (e) {
+                        // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));
+                        console.log(JSON.stringify(e))
+                    }
+                });
+    
+            },
+        )
+
+        console.log("groupID="+ groupID);
+
+        // let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNAYS5jb20iLCJlbWFpbCI6ImFiY0BhLmNvbSIsImlhdCI6MTY1NDQyOTUxMX0.2oHg_B3uakU-aOsIe4BUaPEP_Gq55bJP_ZiUCK02mU4";
+        // let test_meetID = "213as";
+        
+        
+        chrome.cookies.get(
+            { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
+            (res) => {
+                
+                // 透過ajax向指定的api url發起request
+                $.ajax(`https://canmeet.herokuapp.com/v1/group/modify`, {
+                    type: 'POST',  // http method
+                    dataType: "json",
+                    data: JSON.stringify({ 
+                        "groupId": groupId,
+                        "updateGroupName": $("input#GroupName").val(),
+                        "updateMeetId": $("#MeetID").val(),
+                     }),
+                    headers: {
+                        "Authorization": res.value
+                    },
+    
+                    success: function (data, status, xhr) {
+                        $('#GroupName').attr('value', data.updatedGroupName);
+                        $('#MeetID').attr('value', data.updatedMeetId);
+                    },
+                    error: function (e) {
+                        console.log(JSON.stringify(e))
+                    }
+                });
+    
+            },
+        )
+    })
+
+}
 
 
 
