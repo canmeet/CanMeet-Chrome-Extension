@@ -74,7 +74,7 @@ function setGroupName() {
 
                         success: function (data, status, xhr) {
                             $('#GroupNames').text(data.groupName + " | " + meetId);
-                            // $('#GroupMeetID').text(meetId);
+                            $('#current_team').text(data.groupName);
                             // document.getElementById("groupNameArea").style.visibility="visible";
                             let photosCode = '';
                             for(i=0;i<data.memberAmount;i++){
