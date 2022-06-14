@@ -1,0 +1,99 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../lib/jquery-3.6.0.min.js"></script>
+
+    <!-- import bootstrap -->
+    <link href="../lib/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+    <script src="../lib/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <!-- import SVG framework -->
+    <script src="../lib/iconify.min.js"></script>
+
+    <!-- import css -->
+    <link rel="stylesheet" href="./teamlist.css">
+
+    <!-- import javascript -->
+    <script src="./teamlist.js" defer></script>
+</head>
+
+<body>
+    <div style="height: 300; width: 480">
+        <!-- 標題欄區塊(navbar) begin -->
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <!-- logo -->
+                    <h1
+                        style="color: #667080; padding-top: 14px; font-size: 25px; font-weight: bold; font-family: Noto Sans TC;">
+                        CanMeet</h1>
+                    <span class="iconify" data-icon="el:group" id="groupicon"></span>
+                    <p id="current_team" style="font-size: 10px;">當前小組</p>
+                </div>
+                <div class="col-6">
+                    <!-- navbar -->
+                    <button type="button" class="btn btn-outline-dark" id="TopicGenerator" onclick="">話題</button>
+                    <button type="button" class="btn btn-outline-dark" id="OrderGenerator" onclick="">順序</button>
+                    <button type="button" class="btn btn-outline-dark" id="LuckyOneGenerator">幸運兒</button>
+                </div>
+                <div class="col-3">
+                    <!-- userinfo -->
+                    <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
+                        <img id="myPhoto"
+                            src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                            onclick="upload_UserPhoto.click()"
+                            style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-left: 1;">
+                    </h3>
+                </div>
+            </div>
+        </div>
+        <!-- 標題欄區塊(navbar) end -->
+
+
+        <!-- 主功能區域 begin：主要的功能可以放在此container中，基本上應該不會影響到其他的UI -->
+        <div class="container" style="margin-left: 10;" id="ListArea">
+            <div class="row" id="groupbox">
+                <div class="col-2">
+                    <!-- 小組頭像 -->
+                    <div id="">
+                        <img src="../img/group_icon.png" id="GroupIconImg" >
+                    </div>
+                </div>
+                <div class="col" style="margin-top: 5;">
+
+                    <!-- 小組名稱 -->
+                    <nobr id="GroupNames"> mjd-sbq-izb | </nobr>
+                    <nobr id="GroupMeetID">mjd-sbq-izb</nobr>
+
+                    <!-- 小組組員頭像 -->
+                    <div id="membericon">
+                        <img src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
+                            id="MemberPic">
+                    </div>
+
+
+                </div>
+                <div class="col" id="GroupEditDiv">
+                    <img src="../img/edit.png" id="GrpupEditIcon" >
+                </div>
+            </div>
+
+
+
+
+            <!-- 主功能區域 end -->
+
+
+            <!-- help button -->
+            <!-- <button type="button" id="btn_QA" onclick="window.location.href='https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919';  
+        window.open('https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919');">
+                <img src="../img/icon_Q&A.png" id="img_forQA" alt="">
+            </button> -->
+        </div>
+</body>
+
+</html>
