@@ -12,7 +12,9 @@ window.onload = ()=>{
 $("#btn_QA").on("click", helpClicked);
 $("#refreshButton").on("click", refreshOrder);
 $("#btn_logo").on("click", logoclicked);
-$("#btn_TopicGenerator").on("click", logoclicked);
+$("#btn_TopicGenerator").on("click", ()=>{
+    window.location.replace("../LoggedInIndex.html");
+});
 $("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 $("#current_team").on("click", ()=>{
