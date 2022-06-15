@@ -1,0 +1,337 @@
+/* button / profile / user / 7 */
+
+img.userphoto{
+    position: relative;
+    bottom: 5px;
+    left: 5px;
+    
+    display: flex; 
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+
+    /*background: url(.png);*/
+    border-radius: 100px;
+}
+
+#LuckyUser {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: #667080;
+}
+
+#userid {
+    font-size: 10px;
+    color: #667080;
+    padding-top: 5px;
+}
+
+#myphoto {
+    background: url(.png);
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 100px;
+
+    /* position */
+    position: relative;
+    bottom: 10px;
+    left: 57px;
+}
+
+#refreshbutton {
+    /* font setting */
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 125%;
+    color: #EEF1F4;
+
+    /* button background */
+    width: 80px;
+    height: 28px;
+    background: #667080;
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+#refreshbutton:hover {
+    opacity: 0.7;
+}
+
+#refresh_hint {
+    font-size: 10px; 
+}
+
+#btn_QA {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+
+    /* position */
+    position: absolute;
+    left: 430px;
+    top: 250px;
+
+
+    background-image: url('../img/icon_Q&A.png');
+    width: 40px;
+    height: 20px;
+}
+
+#btn_logo {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+    
+    width: 100px;
+    height: 44px;
+    margin-bottom: 5px;
+}
+
+/*----- navbar (begin) -----*/
+#groupicon {
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+#btn_TopicGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_OrderGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_LuckyOneGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#TopicGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom: 10px;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#TopicGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#OrderGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#OrderGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#LuckyOneGenerator {
+    width: 62px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#LuckyOneGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+
+/*----- navbar (end) -----*/
+
+#btn_QA:hover {
+    opacity: 0.7;
+}
+
+#img_forQA {
+    width: 16px;
+    height: 16px;
+
+    /* position */
+    left: 470px;
+    top: 300px;
+}
+
+/*----- mainfunction area (begin) -----*/
+
+#area_mainfuction {
+    margin-top: 10px;
+}
+
+#Input_GroupName {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 184px;
+    height: 51px;
+    left: 20px;
+    top: 85px;
+}
+
+#Input_MeetID {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 184px;
+    height: 51px;
+    left: 220px;
+    top: 85px;
+
+}
+
+#MeetID {
+    font-size: 10px;
+    color: #667080;
+}
+
+#GroupName {
+    font-size: 10px;
+    color: #667080;
+}
+
+#memberlist_hint {
+
+    /* position */
+    position: absolute;
+    left: 10px;
+    top: 145px;
+}
+
+#memberlist {
+    /* position */
+    position: absolute;
+    left: 20px;
+    top: 165px;
+    width: 400px;
+    height: 51px;
+
+}
+
+.member {
+    width: 50px;
+    height: 50px;
+    border: #667080;
+
+    float: left;
+}
+
+.btn_deletemember {
+    
+    /* clear defult button */
+    background-color: transparent;
+    border: none;
+    
+    /* position */
+    position: relative;
+    top: 7px;
+    right: 3px;
+    z-index:1;
+
+}
+
+.img_deletemember:hover {
+    opacity: 0.7;
+}
+
+#btn_canceled {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    width: 57px;
+    height: 28px;
+    left: 20px;
+    top: 240px;
+
+    /* font setting */
+    color: #667080;
+    font-size: 10px;
+
+    /* button theme */
+    background: #EEF1F4;
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+#btn_verified {
+
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+    width: 57px;
+    height: 28px;
+    left: 85px;
+    top: 240px;
+
+    /* font setting */
+    color: #EEF1F4;
+    font-size: 10px;
+
+    /* button theme */
+    background: #667080;
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+
+/*----- mainfunction area (end) -----*/

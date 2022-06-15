@@ -1,18 +1,24 @@
-window.onload = ()=>{
+window.onload = () => {
     setPhoto();
     setGroupName();
     setInfoContent();
 }
-
-$('#luckyBtn').on("click", luckyClicked);
 $("#btn_QA").on("click", helpClicked);
-$("#GobackDiv").on("click", ()=>{
+$("#btn_logo").on("click", logoclicked);
+$("#TopicGenerator").on("click", ()=>{
+    window.location.replace("../inMeet/topic/ShowResult.html");  
+});
+$("#OrderGenerator").on("click", logoclicked);
+$("#LuckyOneGenerator").on("click", luckyoneclicked);
+$("#btn_userprofile").on("click", avatarclicked);
+
+$("#GobackDiv").on("click", () => {
     window.location.replace("../teamlist/teamlist.html");
 });
-$("#myGroup").on("click", ()=>{
+$("#myGroup").on("click", () => {
     window.location.replace("../teamlist/teamlist.html");
 });
-$("#myPhoto").on("click", ()=>{
+$("#myPhoto").on("click", () => {
     window.location.href = "https://canmeet.github.io/edit_profile/";
     window.open("https://canmeet.github.io/edit_profile/");
 });
@@ -36,7 +42,7 @@ function setPhoto() {
 
                 success: function (data, status, xhr) {
                     // alert(JSON.stringify(data.photoUrl))
-                    $('#myPhoto').attr('src',data.photoUrl);
+                    $('#myPhoto').attr('src', data.photoUrl);
                 },
                 error: function (e) {
                     // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));
@@ -47,7 +53,7 @@ function setPhoto() {
         },
     )
 
-    
+
 }
 
 async function getCurrentTab() {
@@ -104,14 +110,33 @@ function setGroupName() {
 
 
 
-function luckyClicked() {
-    window.location.replace("./luckyone/LuckyOnePage.html");
+
+function logoclicked() {
+    console.log("logo got clicked!");
+    window.location.replace("../inMeet/LoggedInIndex.html");  
+}
+
+// avatarclicked：點擊後進到個人資料編輯界面
+function avatarclicked() {
+    window.location.href="https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html";  
+    window.open("https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html");
+}
+
+// luckyoneclicked：點擊後進到幸運兒界面
+function luckyoneclicked() {
+    window.location.replace("../inMeet/luckyone/LuckyOnePage.html");  
+}
+
+// backtoteamlist：點擊後回到小組列表
+function backtoteamlist() {
+    window.location.replace("../teamlist/teamlist.html");    // 待修改
 }
 
 function helpClicked() {
-    window.location.href = "https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919";
+    window.location.href="https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919";  
     window.open("https://candied-football-f4f.notion.site/Canmeet-Q-A-ba85f0004771463b892949841bebf919");
 }
+
 
 function setInfoContent() {
     getCurrentTab().then((res) => {
@@ -141,6 +166,34 @@ function setInfoContent() {
                         success: function (data, status, xhr) {
                             // $('#current_team').text(data.groupName);
                             // document.getElementById("groupNameArea").style.visibility="visible";
+                            let boxCode = '';
+                            for (i = 0; i < data.recordCount; i++) {
+                                let singleBox = '';
+                                singleBox = `
+                                <div class="row row-cols-auto" style="margin-right: 10;">
+                                    <div class="col" style="width: 30;">
+                                    <div>
+                                        <img src="${data.usersResult[i][1]}"
+                                            id="MemberPic">
+                                    </div>
+                                </div>
+
+                                <div class="col">
+                                    <div id="singleName">${data.usersResult[i][0]}</div>
+                                </div>
+                                ${(data.usersResult[i][2]==null)?(`<div></div>`):(`<div id="singleBox">${data.usersResult[i][2]}</div>`)}
+                                ${(data.usersResult[i][3]==null)?(`<div></div>`):(`<div id="singleBox">${data.usersResult[i][3]}</div>`)}
+                                ${(data.usersResult[i][4]==null)?(`<div></div>`):(`<div id="singleBox">${data.usersResult[i][4]}</div>`)}
+                                ${(data.usersResult[i][5]==null)?(`<div></div>`):(`<div id="singleBox">${data.usersResult[i][5]}</div>`)}
+                                ${(data.usersResult[i][6]==null)?(`<div></div>`):(`<div id="singleBox">${data.usersResult[i][6]}</div>`)}
+                                
+
+                                </div>
+                `
+                                boxCode = boxCode + singleBox;
+                            }
+                            $('#IndividualsArea').html(boxCode);
+
                         },
                         error: function (e) {
                             // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));

@@ -8,11 +8,11 @@
     justify-content: left;
 }
 
-/* #membericon{
+#membericon{
     display: flex; 
     justify-content: left;
     margin-top: 5;
-} */
+}
 
 #LuckyUser {
     display: flex;
@@ -167,13 +167,14 @@
 /*----- mainfunction area (begin) -----*/
 
 #MemberPic{
-    display: flex; justify-content: left;width: 30; height: 30; border-radius: 50%;
+    width: 30; height: 30; border-radius: 50%; margin-top: 5;
+
 }
 
 #GroupNameAndID{
-     margin-bottom: 5; color: #667080; font-family: 'Noto Sans TC';font-weight: 700;
+     color: #667080; font-family: 'Noto Sans TC';font-weight: 700;
     font-size: 15px;
-    line-height: 125%; margin-top: 15; width: 270;
+    line-height: 125%; margin-top: 22; width: 270;
 }
 
 #GroupMeetID{
@@ -184,7 +185,7 @@
     width: 50; height:50; border-radius: 50%; margin-top: 10; margin-left: 7;
 }
 #GobackDiv{
-    margin-top: 12;display: flex; justify-content: right;display:inline;
+    margin-top: 17;display: flex; justify-content: right;display:inline;
 }
 #GrpupEditIcon{
     width: 23; height:23;
@@ -210,4 +211,64 @@
     top: 66px;
 
 
+}
+#singleBox{
+    margin-right: 10;
+    font-size: 12;
+    /* Pill / outline */
+    margin-top: 7;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 3px;
+
+
+width: 50px;
+height: 22px;
+
+/* White */
+background: #FFFFFF;
+
+/* Primary */
+border: 1.7px solid #667080;
+border-radius: 24px;
+
+/* Inside auto layout */
+/* flex: none; */
+order: 0;
+flex-grow: 0;
+}
+
+#singleName{
+    font-size: 15;
+    /* Pill / outline */
+    margin-top: 7;
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 9px 20px;
+
+
+width: 49px;
+height: 22px;
+
+/* White */
+background: #FFFFFF;
+
+/* Primary */
+/* border: 1.7px solid #667080;
+border-radius: 24px; */
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
 }

@@ -1,10 +1,12 @@
-window.onload = ()=>{
+window.onload = () => {
     setPhoto();
     setGroupName();
     setContent();
 
 }
 $("#GroupEditDiv").on("click", editOnClick);
+$("#nameAndPhoto").on("click", groupBoxClicked);
+$("#groupIconArea").on("click", groupBoxClicked);
 
 function setPhoto() {
 
@@ -26,7 +28,7 @@ function setPhoto() {
 
                 success: function (data, status, xhr) {
                     // alert(JSON.stringify(data.photoUrl))
-                    $('#myPhoto').attr('src',data.photoUrl);
+                    $('#myPhoto').attr('src', data.photoUrl);
                 },
                 error: function (e) {
                     // $('#myid').html('登入失敗, Status Code: ' + e.status + ', data: ' + JSON.stringify(e.responseJSON));
@@ -37,7 +39,7 @@ function setPhoto() {
         },
     )
 
-    
+
 }
 
 async function getCurrentTab() {
@@ -77,7 +79,7 @@ function setGroupName() {
                             $('#current_team').text(data.groupName);
                             // document.getElementById("groupNameArea").style.visibility="visible";
                             let photosCode = '';
-                            for(i=0;i<data.memberAmount;i++){
+                            for (i = 0; i < data.memberAmount; i++) {
                                 let singlePhoto = `<img src="${data.photoArray[i]}"
                                 id="MemberPic">`
                                 photosCode = photosCode + singlePhoto;
@@ -99,10 +101,15 @@ function setGroupName() {
 
 }
 
-function setContent(){
-    
+function setContent() {
+
 }
 
-function editOnClick(v){
+function editOnClick(v) {
+
+    window.location.replace("../TeamEdit/TeamEdit.html");
+}
+
+function groupBoxClicked() {
     window.location.replace("../TeamMemberInfo/TeamMemberInfo.html");
 }
