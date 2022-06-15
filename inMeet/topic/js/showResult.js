@@ -63,6 +63,10 @@ async function getCurrentTab() {
     return tab;
 }
 
+setInterval(()=>{
+    setContent();
+}, 1000);
+
 function setContent() {
     getCurrentTab().then((res) => {
         tab = res;
