@@ -12,7 +12,7 @@ $("#btn_QA").on("click", helpClicked);
 $("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
-$("#btn_OrderGenerator").on("click", logoclicked);
+$("#btn_OrderGenerator").on("click", orderclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 
 
@@ -21,6 +21,10 @@ $("#btn_userprofile").on("click", avatarclicked);
 function logoclicked() {
     console.log("logo got clicked!");
     window.location.replace("/inMeet/LoggedInIndex.html");
+}
+
+function orderclicked() {
+    window.location.replace("/Order/getOrder.html");
 }
 
 // avatarclicked：點擊後進到個人資料編輯界面

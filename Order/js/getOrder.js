@@ -3,7 +3,7 @@
 // window.onload = setPhoto;
 // window.onload = setLuckData;
 window.onload = ()=>{
-    setLuckData();
+    setOrderData();
     setPhoto();
 }
 
@@ -14,6 +14,7 @@ $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
 $("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
+
 
 
 
@@ -80,17 +81,16 @@ function setPhoto() {
 
 
 
-function setLuckData() {
+function setOrderData() {
 
     getCurrentTab().then((res) => {
         tab = res;
         let tabUrl = JSON.stringify([tab.url]);
         let meetId = tabUrl.substring(26, 38);
-        console.log(meetId);
 
 
-        // let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNAYS5jb20iLCJlbWFpbCI6ImFiY0BhLmNvbSIsImlhdCI6MTY1NDQyOTUxMX0.2oHg_B3uakU-aOsIe4BUaPEP_Gq55bJP_ZiUCK02mU4";
-        // let test_meetID = "213as";
+        //let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGExLmNvbSIsImVtYWlsIjoidGVzdEBhMS5jb20iLCJpYXQiOjE2NTQ0NTIyODd9.-nqPvT8c06MlBJTtkSi-PSsn9GHK8LXo4dYG_OHTC1w";
+        //let test_meetID = "waa-kdtd-jbh";
 
         chrome.cookies.get(
             { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
@@ -98,20 +98,31 @@ function setLuckData() {
 
 
                 // 透過ajax向指定的api url發起request
-                $.ajax(`https://canmeet.herokuapp.com/v1/meet/lucky?meetId=${meetId}`, {
+                $.ajax(`https://canmeet.herokuapp.com/v1/meet/order/draw?meetId=${meetId}`, {
                     type: 'GET',  // http method
                     // dataType: "json",
                     // data: JSON.stringify({  }),
                     headers: {
                         "Authorization": res.value
+                        //"Authorization": test_authorization
                     },
 
                     success: function (data, status, xhr) {
                         // 將id=luckuser的物件的src改成接收到的圖片位置
-                        $('#luckyuser').attr('src', data.luckyUser.photo);
-                        $('#userid').html(data.luckyUser.name);
+
+                        console.log(typeof data.recordAmount);
+                        console.log(data.recordAmount);
+
+                        for (var i = 0; i < data.recordAmount; i++){
+                            console.log(data.order[i].photo);
+                            console.log(data.order[i].name);
+                            var member_object=`<div class="member" id="member${i}"><img src="${data.order[i].photo}" class="userphoto" id="userphoto${i}"><p class="userid" id="userid${i}" style=" display: flex; justify-content: center;">${data.order[i].name}</p></div>`;
+                            
+                            $("div#memberlist").append(member_object);
+                        }
+
+                        
                         $('#refresh_hint').html(data.generateTime + "&nbsp<b>" + data.generatorName + "</b>&nbsp" + "重新產生了幸運兒");
-                        $('#current_team').text(data.groupName);
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))
@@ -128,6 +139,7 @@ function setLuckData() {
 // refreshOrder: 刷新順序
 
 function refreshOrder() {
+    console.log("refresh order button got clicked!");
 
     getCurrentTab().then((res) => {
         tab = res;
@@ -136,8 +148,8 @@ function refreshOrder() {
         console.log(meetId);
 
 
-        // let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNAYS5jb20iLCJlbWFpbCI6ImFiY0BhLmNvbSIsImlhdCI6MTY1NDQyOTUxMX0.2oHg_B3uakU-aOsIe4BUaPEP_Gq55bJP_ZiUCK02mU4";
-        // let test_meetID = "213as";
+        //let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QGExLmNvbSIsImVtYWlsIjoidGVzdEBhMS5jb20iLCJpYXQiOjE2NTQ0NTIyODd9.-nqPvT8c06MlBJTtkSi-PSsn9GHK8LXo4dYG_OHTC1w";
+        //let test_meetID = "waa-kdtd-jbh";
 
         chrome.cookies.get(
             { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
@@ -145,19 +157,33 @@ function refreshOrder() {
                 
                 
                 // 透過ajax向指定的api url發起request
-                $.ajax(`https://canmeet.herokuapp.com/v1/meet/lucky/draw?meetId=${meetId}`, {
+                $.ajax(`https://canmeet.herokuapp.com/v1/meet/order/draw?meetId=${meetId}`, {
                     type: 'GET',  // http method
                     // dataType: "json",
                     // data: JSON.stringify({  }),
                     headers: {
                         "Authorization": res.value
+                        //"Authorization": test_authorization
                     },
-    
                     success: function (data, status, xhr) {
-                        // 將id=luckuser的物件的src改成接收到的圖片位置
-                        $('#luckyuser').attr('src', data.luckyUser.photo);
-                        $('#userid').html(data.luckyUser.name);
-                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了幸運兒");
+   
+                        
+                        //console.log("refresh successed!");
+                        console.log(data.generateTime);
+                        console.log(data.generatorName);
+                        console.log(data.description);
+                        console.log(data.recordAmount);
+
+                        for (var i = 0; i < data.recordAmount; i++){
+                            console.log(data.order[i].photo);
+                            console.log(data.order[i].name);
+
+                            
+                            $("#userphoto"+i).attr('src', data.order[i].photo);
+                            $("#userid"+i).text(data.order[i].name);
+                        }
+
+                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))

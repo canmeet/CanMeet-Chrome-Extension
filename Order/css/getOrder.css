@@ -213,8 +213,12 @@ img.userphoto{
 }
 
 #memberlist {
-    margin-top: 10px;
 
+    /* inner object position */
+    display: flex;
+    justify-content: center;
+
+    margin-top: 10px;
     width: 380px;
     height: 100px;
 }
