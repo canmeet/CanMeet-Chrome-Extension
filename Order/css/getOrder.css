@@ -1,0 +1,222 @@
+/* button / profile / user / 7 */
+
+img.userphoto{
+    display: flex; 
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+
+    background: url(.png);
+    border-radius: 100px;
+}
+
+#LuckyUser {
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+    color: #667080;
+}
+
+#userid {
+    font-size: 10px;
+    color: #667080;
+    padding-top: 5px;
+}
+
+#myphoto {
+    background: url(.png);
+    filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 100px;
+
+    /* position */
+    position: relative;
+    bottom: 10px;
+    left: 57px;
+}
+
+#refreshbutton {
+    /* font setting */
+    font-family: 'Noto Sans TC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 125%;
+    color: #EEF1F4;
+
+    /* button background */
+    width: 80px;
+    height: 28px;
+    background: #667080;
+    border: 1px solid #667080;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 2px;
+}
+#refreshbutton:hover {
+    opacity: 0.7;
+}
+
+#refresh_hint {
+    font-size: 10px; 
+}
+
+#btn_QA {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+
+    /* position */
+    position: absolute;
+    left: 430px;
+    top: 250px;
+
+
+    background-image: url('../img/icon_Q&A.png');
+    width: 40px;
+    height: 20px;
+}
+
+#btn_logo {
+    /* clean default button theme */
+    background-color: transparent;
+    border: none;
+    
+    width: 100px;
+    height: 44px;
+    margin-bottom: 5px;
+}
+
+/*----- navbar (begin) -----*/
+#groupicon {
+    float: left;
+    margin-left: 10px;
+    margin-right: 5px;
+}
+#btn_TopicGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_OrderGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#btn_LuckyOneGenerator {
+    float: left;
+    padding-right: 5px;
+}
+#TopicGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom: 10px;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#TopicGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#LuckyOneGenerator {
+    width: 62px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #EEF1F4;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #667080;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+#LuckyOneGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
+#OrderGenerator {
+    width: 50px;
+    height: 28px;
+    border-radius: 30px;
+    border-color: #667080;
+    background: #667080;
+    
+    /* font setting */
+    font-size: 10px;
+    color: #EEF1F4;
+    padding-bottom:0px; 
+    padding-top:1px;
+
+    /* position */
+    position: relative;
+    top: 15px;
+}
+
+
+/*----- navbar (end) -----*/
+
+#btn_QA:hover {
+    opacity: 0.7;
+}
+
+#img_forQA {
+    width: 16px;
+    height: 16px;
+
+    /* position */
+    left: 470px;
+    top: 300px;
+}
+
+/*----- mainfunction area (begin) -----*/
+
+#area_mainfuction {
+    margin-top: 10px;
+}
+
+
+img.userphoto{
+    position: relative;
+    
+    display: flex; 
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+
+    /*background: url(.png);*/
+    border-radius: 100px;
+}
+
+.userid {
+    font-size: 10px;
+    color: #667080;
+    padding-top: 5px;
+}
+
+.member {
+    float: left;
+    margin: 5px;
+}
+
+#memberlist {
+    margin-top: 10px;
+
+    width: 380px;
+    height: 100px;
+}
+
+/*----- mainfunction area (end) -----*/
