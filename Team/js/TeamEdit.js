@@ -113,6 +113,7 @@ function setPhoto() {
                         // alert(JSON.stringify(data.photoUrl))
                         $('#GroupName').attr('value', data.groupName);
                         $('#MeetID').attr('value', data.meetId);
+                        $('#current_team').text(data.groupName);
                         groupID = data.groupId;
 
                         console.log("groupID1 = " + groupID);
@@ -191,6 +192,7 @@ function modifygroupinfo() {
                         $('#GroupName').attr('value', data.updatedGroupName);
                         $('#MeetID').attr('value', data.updatedMeetId);
                         console.log("update successed!");
+                        $('#current_team').text(data.updatedGroupName);
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))
