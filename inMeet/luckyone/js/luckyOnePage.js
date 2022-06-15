@@ -112,7 +112,7 @@ function setLuckData() {
                         // 將id=luckuser的物件的src改成接收到的圖片位置
                         $('#luckyuser').attr('src', data.luckyUser.photo);
                         $('#userid').html(data.luckyUser.name);
-                        $('#refresh_hint').html(data.generateTime + "&nbsp<b>" + data.generatorName + "</b>&nbsp" + "重新產生了幸運兒");
+                        $('#refresh_hint').html(data.generateTime.substring(0,10) + " " + data.generateTime.substring(11,19) + "&nbsp<b>" + data.generatorName + "</b>&nbsp" + "重新產生了幸運兒");
                         $('#current_team').text(data.groupName);
                     },
                     error: function (e) {
@@ -157,7 +157,7 @@ function refreshLuckyOne() {
                         // 將id=luckuser的物件的src改成接收到的圖片位置
                         $('#luckyuser').attr('src', data.luckyUser.photo);
                         $('#userid').html(data.luckyUser.name);
-                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了幸運兒");
+                        $('#refresh_hint').html(data.generateTime.substring(0,10) + " " + data.generateTime.substring(11,19)+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了幸運兒");
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))

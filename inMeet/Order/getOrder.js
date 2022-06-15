@@ -13,7 +13,7 @@ $("#btn_QA").on("click", helpClicked);
 $("#refreshButton").on("click", refreshOrder);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", ()=>{
-    window.location.replace("../LoggedInIndex.html");
+    window.location.replace("../topic/ShowResult.html");
 });
 $("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
@@ -126,7 +126,7 @@ function setOrderData() {
                             $("div#memberlist").append(member_object);
                         }
 
-                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
+                        $('#refresh_hint').html(data.generateTime.substring(0,10) + " " + data.generateTime.substring(11,19) +"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
                         
                     },
                     error: function (e) {
@@ -188,7 +188,7 @@ function refreshOrder() {
                             $("#userid"+i).text(data.order[i].name);
                         }
 
-                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
+                        $('#refresh_hint').html(data.generateTime.substring(0,10) + " " + data.generateTime.substring(11,19)+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))
