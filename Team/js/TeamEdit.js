@@ -87,10 +87,10 @@ function setPhoto() {
 
         tab = res;
         let tabUrl = JSON.stringify([tab.url]);
-        let meetId =tabUrl.substring(26, 38);
+        let meetId = tabUrl.substring(26, 38);
 
-        let test_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWNrQGFiYy5jb20iLCJlbWFpbCI6ImphY2tAYWJjLmNvbSIsImlhdCI6MTY1NDk3MTA1N30.y6m32iGO2WGE1O8BCtU_l65DZN42FqdXbtsDhwnIrYg";
-        let test_groupID = "crg-edsg-cye";
+        //let test_token = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWNrQGFiYy5jb20iLCJlbWFpbCI6ImphY2tAYWJjLmNvbSIsImlhdCI6MTY1NDk3MTA1N30.y6m32iGO2WGE1O8BCtU_l65DZN42FqdXbtsDhwnIrYg";
+        //let test_groupID = "crg-edsg-cye";
 
         
         chrome.cookies.get(
@@ -99,7 +99,7 @@ function setPhoto() {
                 //alert(JSON.stringify(res.value));
                 // myAuthorization = res.value;
 
-                $.ajax(`https://canmeet.herokuapp.com/v1/group/info?meetId=${test_groupID}`, {
+                $.ajax(`https://canmeet.herokuapp.com/v1/group/info?meetId=${meetId}`, {
                     type: 'GET',  // http method
                     // dataType: "json",
                     // data: JSON.stringify({  }),
@@ -161,16 +161,16 @@ function modifygroupinfo() {
 
         console.log("groupID="+ groupID);
 
-        let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYmNAYS5jb20iLCJlbWFpbCI6ImFiY0BhLmNvbSIsImlhdCI6MTY1NDQyOTUxMX0.2oHg_B3uakU-aOsIe4BUaPEP_Gq55bJP_ZiUCK02mU4";
+        // let test_authorization = "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqYWNrQGFiYy5jb20iLCJlbWFpbCI6ImphY2tAYWJjLmNvbSIsImlhdCI6MTY1NTI1ODg0Nn0.cXNU9H6YNuvcPQ45s2Le14irIzN57DtZh-MxKm_kf9E";
         // let test_meetID = "213as";
         
         chrome.cookies.get(
             { url: 'https://canmeet.github.io/login/', name: 'Authorization' },
             (res) => {
 
-                console.log(groupID);
-                console.log($("input#GroupName").val());
-                console.log($("#MeetID").val());
+                console.log(typeof groupID);
+                console.log(typeof $("input#GroupName").val());
+                console.log(typeof $("#MeetID").val());
 
                 
                 // 透過ajax向指定的api url發起request
@@ -183,13 +183,14 @@ function modifygroupinfo() {
                         "updateMeetId": $("#MeetID").val()
                      }),
                     headers: {
-                        //"Authorization": res.value
-                        "Authorization": test_authorization
+                        "Content-Type": "application/json",
+                        "Authorization": res.value
                     },
     
                     success: function (data, status, xhr) {
                         $('#GroupName').attr('value', data.updatedGroupName);
                         $('#MeetID').attr('value', data.updatedMeetId);
+                        console.log("update successed!");
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))
