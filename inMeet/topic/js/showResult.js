@@ -19,6 +19,12 @@ $(document).ready(function () {
     $("#changeQuesBtn").click(function () {
         handleChangeQues();
     });
+    $("#btn_LuckyOneGenerator").click(function() {
+        window.location.replace("../luckyone/LuckyOnePage.html");
+    })
+    $("#myPhoto").click(function() {
+        window.open("https://canmeet.github.io/edit_profile/");
+    })
 });
 
 function setPhoto() {

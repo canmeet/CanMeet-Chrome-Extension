@@ -11,7 +11,9 @@ window.onload = ()=>{
 $("#btn_QA").on("click", helpClicked);
 $("#refreshButton").on("click", refreshLuckyOne);
 $("#btn_logo").on("click", logoclicked);
-$("#btn_TopicGenerator").on("click", logoclicked);
+$("#btn_TopicGenerator").on("click", ()=>{
+    window.location.replace("/inMeet/topic/ShowResult.html");
+});
 $("#btn_OrderGenerator").on("click", logoclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 
@@ -25,8 +27,8 @@ function logoclicked() {
 
 // avatarclicked：點擊後進到個人資料編輯界面
 function avatarclicked() {
-    window.location.href="https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html";  
-    window.open("https://github.com/canmeet/canmeet.github.io/tree/main/edit_profile/edit_profile.html");
+    window.location.href="https://canmeet.github.io/edit_profile/";  
+    window.open("https://canmeet.github.io/edit_profile/");
 }
 
 

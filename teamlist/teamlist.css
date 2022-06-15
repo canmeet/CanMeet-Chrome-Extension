@@ -148,6 +148,11 @@
     top: 15px;
 }
 
+#LuckyOneGenerator:hover{
+    background-color: #667080;
+    color: #EEF1F4;
+
+}
 
 /*----- navbar (end) -----*/
 
