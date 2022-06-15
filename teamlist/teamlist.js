@@ -8,6 +8,26 @@ $("#GroupEditDiv").on("click", editOnClick);
 $("#nameAndPhoto").on("click", groupBoxClicked);
 $("#groupIconArea").on("click", groupBoxClicked);
 
+$("#btn_logo").click(function () {
+    window.location.replace("../inMeet/LoggedInIndex.html");
+});
+
+$("#TopicGenerator").click(function () {
+    window.location.replace("../inMeet/topic/ShowResult.html");
+});
+
+$("#OrderGenerator").click(function () {
+    window.location.replace("../inMeet/LoggedInIndex.html");
+});
+
+$("#LuckyOneGenerator").click(function () {
+    window.location.replace("../inMeet/luckyone/LuckyOnePage.html");
+});
+
+$("#myPhoto").click(function () {
+    window.open("https://canmeet.github.io/edit_profile/");
+});
+
 function setPhoto() {
 
 

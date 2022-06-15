@@ -15,8 +15,10 @@ $("#btn_TopicGenerator").on("click", ()=>{
     window.location.replace("/inMeet/topic/ShowResult.html");
 });
 $("#btn_OrderGenerator").on("click", logoclicked);
-$("#btn_userprofile").on("click", avatarclicked);
-
+$("#myPhoto").on("click", avatarclicked);
+$("#myGroup").on("click", ()=>{
+    window.location.replace("../../teamlist/teamlist.html");
+});
 
 
 
