@@ -22,12 +22,15 @@ $(document).ready(function () {
     $("#btn_LuckyOneGenerator").click(function () {
         window.location.replace("../luckyone/LuckyOnePage.html");
     })
+    $("#btn_OrderGenerator").click(function () {
+        window.location.replace("../Order/getOrder.html");
+    })
     $("#myPhoto").click(function () {
         window.open("https://canmeet.github.io/edit_profile/");
     })
-    $("#myGroup").click(function () {
+    $("#current_team").on("click", ()=>{
         window.location.replace("../../teamlist/teamlist.html");
-    })
+    });
 });
 
 function setPhoto() {

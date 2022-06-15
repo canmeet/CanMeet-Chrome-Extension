@@ -6,8 +6,12 @@ window.onload = ()=>{
 }
 $("#topicBtn").on("click", topicClicked);
 $('#luckyBtn').on("click", luckyClicked);
+$('#orderBtn').on("click", ()=>{
+    window.location.replace("./Order/getOrder.html");
+});
+
 $("#btn_QA").on("click", helpClicked);
-$("#myGroup").on("click", ()=>{
+$("#current_team").on("click", ()=>{
     window.location.replace("../teamlist/teamlist.html");
 });
 $("#myPhoto").on("click", ()=>{

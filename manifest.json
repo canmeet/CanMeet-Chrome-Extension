@@ -18,6 +18,12 @@
         "https://canmeet-img-proxy.slink.ren/*"
       ],
     "action": {
-        "default_popup": "popup.html"
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "/img/logo.png",
+            "32": "/img/logo.png",
+            "48": "/img/logo.png",
+            "128": "/img/logo.png"
+          }
     }
 }

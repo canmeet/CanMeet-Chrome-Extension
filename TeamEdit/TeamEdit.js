@@ -7,13 +7,17 @@ window.onload = setPhoto;
 $("#btn_QA").on("click", helpClicked);
 $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", logoclicked);
-$("#btn_OrderGenerator").on("click", logoclicked);
+$("#btn_OrderGenerator").on("click", ()=>{
+    window.location.replace("../inMeet/Order/getOrder.html");
+});
 $("#btn_LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 $(".btn_deletemember").on("click", deletemember);
 $("#btn_canceled").on("click", backtoteamlist);
 $("#btn_verified").on("click",  modifygroupinfo);
-
+$("#current_team").on("click", ()=>{
+    window.location.replace("../teamlist/teamlist.html");
+});
 var groupID = "";
 
 

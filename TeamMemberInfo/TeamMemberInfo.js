@@ -8,7 +8,9 @@ $("#btn_logo").on("click", logoclicked);
 $("#TopicGenerator").on("click", ()=>{
     window.location.replace("../inMeet/topic/ShowResult.html");  
 });
-$("#OrderGenerator").on("click", logoclicked);
+$("#OrderGenerator").on("click", ()=>{
+    window.location.replace("../inMeet/Order/getOrder.html"); 
+});
 $("#LuckyOneGenerator").on("click", luckyoneclicked);
 $("#btn_userprofile").on("click", avatarclicked);
 

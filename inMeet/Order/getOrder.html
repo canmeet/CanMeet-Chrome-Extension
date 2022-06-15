@@ -15,10 +15,10 @@
     <script src="../../lib/iconify.min.js"></script>
 
     <!-- import css -->
-    <link rel="stylesheet" href="./css/luckyOnePage.css">
+    <link rel="stylesheet" href="./getOrder.css">
 
     <!-- import javascript -->
-    <script src="./js/luckyOnePage.js" defer></script>
+    <script src="./getOrder.js" defer></script>
 </head>
 
 <body>
@@ -29,14 +29,11 @@
                 <div class="col-3">
                     <!-- logo -->
                     <button type="button" id="btn_logo">
-                        <h1
-                            style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold; font-family: Noto Sans TC;">
-                            CanMeet</h1>
+                        <h1 style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold;">CanMeet</h1>
                     </button>
-                   
-                        <span class="iconify" data-icon="el:group" id="groupicon"></span>
-                        <p id="current_team" style="font-size: 10px; width: 200;">當前小組</p>
-                    
+
+                    <span class="iconify" data-icon="el:group" id="groupicon"></span>
+                    <p id="current_team" style="font-size: 10px; width: 200;">當前小組</p>
                 </div>
                 <div class="col-6">
                     <!-- navbar -->
@@ -55,10 +52,6 @@
                     <!-- userinfo -->
                     <div id="btn_userprofile">
                         <h3 style="color: #667080; padding-top: 20px; font-size: 10px; font-weight: bold;">
-                            <!-- <img id="myGroup"
-                                src="../../img/group_icon.png"
-                                onclick="upload_UserPhoto.click()"
-                                style="width: 35; height: 35; border-radius: 50%;align-items: center; justify-content: center;overflow: hidden; margin-right: 03;"> -->
                             <img id="myPhoto"
                                 src="https://canmeet-img-proxy.slink.ren/9f447c3f-f0a1-4b49-aafc-875be8c270174552895988632343970.png"
                                 onclick="upload_UserPhoto.click()"
@@ -73,36 +66,40 @@
 
         <!-- 主功能區域 begin：主要的功能可以放在此container中，基本上應該不會影響到其他的UI -->
         <div class="container">
-            <div class="row">
-                <div class="col-3">
-                </div>
-                <div class="col-6" id="area_mainfuction">
-                    <!-- 幸運兒頭像 -->
-                    <center>
-                        <img src="./img/fortest.jpeg" class="userphoto" id="luckyuser" alt=""
-                            style="display: flex; justify-content: center;">
-                        <p id="userid"> username </p>
-                    </center>
+            <div class="row" style="display: flex; justify-content: center;">
 
-                    <!-- 重新產生按鈕 -->
-                    <div class="col-md-auto " style="display: flex; justify-content: center;">
-                        <button type="button" class="btn btn-secondary" id="refreshButton">重新產生</button>
+                <!-- 順序頭像列表 -->
+                <div id="memberlist">
+                    <!-- 組員頭像放置欄位 -->
+                    <!-- 新增的組員物件 
+                    <div class="member" >
+                        <img src="/luckyone/img/fortest.jpeg" class="userphoto" >
+                        <p class="userid" style="justify-content: center;"> username </p>
                     </div>
+                    <div class="member" >
+                        <img src="/luckyone/img/fortest.jpeg" class="userphoto" >
+                        <p class="userid" style="justify-content: center;"> username </p>
+                    </div>
+                    -->
+
                 </div>
-                <div class="col-3">
+
+                <!-- 重新產生按鈕 -->
+                <div class="col-md-auto " style="display: flex; justify-content: center;">
+                    <button type="button" class="btn btn-secondary" id="refreshButton">重新產生</button>
                 </div>
+
             </div>
         </div>
         <!-- 主功能區域 end -->
         <div>
             <!-- 重新產生提示 -->
             <p id="refresh_hint"
-                style="display: flex; font-size: 10px;justify-content: center;color: #667080;margin-top:5px">重新產生了幸運兒
-            </p>
+                style="display: flex; font-size: 10px;justify-content: center;color: #667080;margin-top:5px"></p>
         </div>
         <!-- help button -->
         <button type="button" id="btn_QA">
-            <img src="./img/icon_Q&A.png" id="img_forQA" alt="">
+            <img src="../../img/icon_Q&A.png" id="img_forQA" alt="">
         </button>
 
     </div>

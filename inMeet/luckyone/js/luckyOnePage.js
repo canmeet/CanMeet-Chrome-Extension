@@ -14,13 +14,15 @@ $("#btn_logo").on("click", logoclicked);
 $("#btn_TopicGenerator").on("click", ()=>{
     window.location.replace("/inMeet/topic/ShowResult.html");
 });
-$("#btn_OrderGenerator").on("click", logoclicked);
-$("#myPhoto").on("click", avatarclicked);
-$("#myGroup").on("click", ()=>{
-    window.location.replace("../../teamlist/teamlist.html");
+$("#btn_OrderGenerator").on("click", ()=>{
+    window.location.replace("../Order/getOrder.html");
 });
+$("#myPhoto").on("click", avatarclicked);
+$("#current_team").on("click", myGroupClicked);
 
-
+function myGroupClicked() {
+    window.location.replace("../../teamlist/teamlist.html");
+}
 
 function logoclicked() {
     console.log("logo got clicked!");
