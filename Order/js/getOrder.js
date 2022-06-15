@@ -121,8 +121,8 @@ function setOrderData() {
                             $("div#memberlist").append(member_object);
                         }
 
+                        $('#refresh_hint').html(data.generateTime+"&nbsp<b>"+data.generatorName+"</b>&nbsp"+"重新產生了順序");
                         
-                        $('#refresh_hint').html(data.generateTime + "&nbsp<b>" + data.generatorName + "</b>&nbsp" + "重新產生了幸運兒");
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))
