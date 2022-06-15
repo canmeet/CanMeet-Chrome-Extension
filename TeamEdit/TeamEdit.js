@@ -197,6 +197,10 @@ function modifygroupinfo() {
                         $('#MeetID').attr('value', data.updatedMeetId);
                         console.log("update successed!");
                         $('#current_team').text(data.updatedGroupName);
+                        
+                        $('#confirmArea').html(`<div id="successResultTip"><span class="iconify" data-icon="icon-park-outline:check-correct" style="color: #667080;"></span>&nbsp;更新成功！<div>`);
+                        $('#canceledArea').html(``);
+                        
                     },
                     error: function (e) {
                         console.log(JSON.stringify(e))

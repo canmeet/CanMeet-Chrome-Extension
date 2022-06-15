@@ -7,9 +7,9 @@
     <script src="../lib/jquery-3.6.0.min.js"></script>
 
     <!-- import bootstrap -->
-    <link href="../lib/bootstrap.min.css" rel="stylesheet" >
+    <link href="../lib/bootstrap.min.css" rel="stylesheet">
 
-    <script src="../lib/bootstrap.bundle.min.js" ></script>
+    <script src="../lib/bootstrap.bundle.min.js"></script>
 
     <!-- import SVG framework -->
     <script src="../lib/iconify.min.js"></script>
@@ -29,8 +29,7 @@
                 <div class="col-3">
                     <!-- logo -->
                     <button type="button" id="btn_logo">
-                        <h1
-                            style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold; ">
+                        <h1 style="color: #667080; padding-top: 14px; font-size: 24px; font-weight: bold; ">
                             CanMeet</h1>
                     </button>
 
@@ -69,36 +68,39 @@
         <!-- 主功能區域 begin：主要的功能可以放在此container中，基本上應該不會影響到其他的UI -->
         <div class="container">
             <div class="row">
-                
-                    <div class="row-6">
-                        <div class="col-3" id="Input_GroupName">
-                            <label for="GroupName" class="form-label"
-                                style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">小組名稱</label>
-                            <input type="text" class="form-control form-control-sm" id="GroupName" value="取得groupID中...">
-                        </div>
-                        <div class="col-3" id="Input_MeetID">
-                            <label for="MeetID" class="form-label"
-                                style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">Google Meet代碼</label>
-                            <input type="text" class="form-control form-control-sm" id="MeetID" value="取得meetID中...">
-                        </div>
+
+                <div class="row-6">
+                    <div class="col-3" id="Input_GroupName">
+                        <label for="GroupName" class="form-label"
+                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">小組名稱</label>
+                        <input type="text" class="form-control form-control-sm" id="GroupName" value="取得groupID中...">
                     </div>
-                    <p id="memberlist_hint" style="font-size: 10px;color: #667080;margin-top:5px">組員</p>
-                    <div id="memberlist">
-                        <!-- 組員頭像放置欄位 -->
-                        <!-- 新增的組員物件 
+                    <div class="col-3" id="Input_MeetID">
+                        <label for="MeetID" class="form-label"
+                            style="font-size: 10px; color:#667080;font-family: 'Noto Sans TC';">Google Meet代碼</label>
+                        <input type="text" class="form-control form-control-sm" id="MeetID" value="取得meetID中...">
+                    </div>
+                </div>
+                <p id="memberlist_hint" style="font-size: 10px;color: #667080;margin-top:5px">組員</p>
+                <div id="memberlist">
+                    <!-- 組員頭像放置欄位 -->
+                    <!-- 新增的組員物件 
                         <div class="member" >
                             <button class="btn_deletemember"><img src="/luckyone/img/cross.png" class="img_deletemember" alt="" style="width: 15px;height: 15px;"></button>
                             <img src="/luckyone/img/fortest.jpeg" class="userphoto" >
                         </div>
                         -->
-                        
 
-                    </div>
+
+                </div>
+                <div id="canceledArea">
                     <button id="btn_canceled">取消</button>
+                </div>
+                <div id="confirmArea">
                     <button id="btn_verified">確認</button>
-                    
-                    
-                
+                </div>
+
+
             </div>
         </div>
         <!-- 主功能區域 end -->
